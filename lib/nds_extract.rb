@@ -44,24 +44,7 @@ end
 
 
 def gross_per_studio(collection)
-  # new_hash = {}
-
-  # collection.map do |elem|
-  #   studio = elem[:studio]
-  #   new_hash[studio] = 0
-  # end
   
-  # result = {}
-  # new_hash.each do |k, v|
-  #   total = 0
-  #   collection.map do |elem|
-  #     if (k == elem[:studio])
-  #       total += elem[:worldwide_gross]
-  #       result[k] = total
-  #     end
-  #   end
-  # end
-  # result
 end
 
 def movies_with_directors_set(source)
