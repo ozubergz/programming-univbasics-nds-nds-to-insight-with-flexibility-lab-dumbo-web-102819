@@ -34,11 +34,12 @@ end
 # Your code after this point
 
 def movies_with_director_key(name, movies_collection)
-  result = []
-  movies_collection.map do |elem|
-    result.push(movie_with_director_name(name, elem))
+  aoh = []
+  movies_collection.map do |movie|
+    h = movie_with_director_name(name, movie)
+    aoh.push(h)
   end
-  result
+  aoh
 end
 
 
