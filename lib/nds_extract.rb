@@ -44,38 +44,32 @@ end
 
 
 def gross_per_studio(collection)
-  new_hash = {}
+  # new_hash = {}
 
-  collection.map do |elem|
-    studio = elem[:studio]
-    new_hash[studio] = 0
-  end
+  # collection.map do |elem|
+  #   studio = elem[:studio]
+  #   new_hash[studio] = 0
+  # end
   
-  result = {}
-  new_hash.each do |k, v|
-    total = 0
-    collection.map do |elem|
-      if (k == elem[:studio])
-        total += elem[:worldwide_gross]
-        result[k] = total
-      end
-    end
-  end
-  result
+  # result = {}
+  # new_hash.each do |k, v|
+  #   total = 0
+  #   collection.map do |elem|
+  #     if (k == elem[:studio])
+  #       total += elem[:worldwide_gross]
+  #       result[k] = total
+  #     end
+  #   end
+  # end
+  # result
 end
 
 def movies_with_directors_set(source)
   aoa = []
   source.map do |elem|
     name = elem[:name]
-    movies = elem[:movies]
-    movies.map do |val|
-      title = val[:title]
-      aoa.push([{
-        :title => title,
-        :director_name => name
-      }])
-    end
+    movies_coll = elem[:movies]
+    aoa.push(movies_with_director_key(name, movies_coll))
   end
   aoa
 end
